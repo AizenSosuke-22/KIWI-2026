@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  /* Kivi color palette — warm cream base, muted greens, terracotta spice */
+  --color-cream: #F5F1E8;
+  --color-cream-card: #EFEADD;
+  --color-cream-deep: #E8E2D0;
+  --color-ink: #2C2620;
+  --color-ink-muted: #7A6F60;
+  --color-ink-faint: #B8AF9E;
+  --color-green: #4A6B4E;
+  --color-green-deep: #3A5540;
+  --color-green-light: #E8EFE0;
+  --color-green-highlight: #D4E0C8;
+  --color-terracotta: #C67B5C;
+  --color-terracotta-soft: #E8CFC1;
+  --color-border: rgba(122, 111, 96, 0.15);
+  --color-border-strong: rgba(122, 111, 96, 0.28);
+
+  /* Typography */
+  --font-serif: "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* Radii — everything rounded, no sharp corners */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-pill: 999px;
+
+  /* Motion — matches the philosophy in Part E */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+}
+
+/* Base — warm cream everywhere, deep warm ink for text */
+html, body {
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-feature-settings: "cv11", "ss01";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle paper texture — very faint, just enough warmth */
+body {
+  background-image:
+    radial-gradient(rgba(122, 111, 96, 0.025) 1px, transparent 1px),
+    radial-gradient(rgba(122, 111, 96, 0.02) 1px, transparent 1px);
+  background-size: 24px 24px, 40px 40px;
+  background-position: 0 0, 12px 12px;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-green-highlight);
+  color: var(--color-ink);
+}
+
+/* Scrollbar — subtle, warm */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-strong);
+  border-radius: var(--radius-pill);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-ink-faint);
+}
+
+/* Utility — warm underline squiggle we saw in the current Kivi */
+.underline-squiggle {
+  background-image: linear-gradient(var(--color-green-highlight), var(--color-green-highlight));
+  background-repeat: no-repeat;
+  background-position: 0 88%;
+  background-size: 100% 30%;
+  padding: 0 2px;
+}
