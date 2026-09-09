@@ -1,6 +1,7 @@
 # Kivi Prototype
 
 A UI/UX redesign of Kivi by Sarvam, built for the Product UI/UX & Design assignment.
+Deployed prototype link - https://kiwi-2026.vercel.app/shortcuts
 
 ## What is this
 
