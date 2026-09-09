@@ -2,6 +2,8 @@
 
 A UI/UX redesign of Kivi by Sarvam, built for the Product UI/UX & Design assignment.
 
+Deployed prototype link - https://kiwi-2026.vercel.app/
+
 ## What is this
 
 Kivi is a Mac dictation and language-transformation app for Indian users who speak fluently but struggle to write in English or formal text. This prototype implements the complete redesign, including a reimagined Styles feature, a new Translate feature, a new Improv feature, and a Pattern insight feature.
